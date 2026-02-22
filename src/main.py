@@ -1,8 +1,8 @@
-from datetime import datetime, timezone
+import uvicorn
 
 
 def main() -> None:
-    print("sla-breach-prevention-assistant initialized at", datetime.now(timezone.utc).isoformat())
+    uvicorn.run("src.app:app", host="0.0.0.0", port=8000, reload=False)
 
 
 if __name__ == "__main__":
